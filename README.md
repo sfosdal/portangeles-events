@@ -14,7 +14,7 @@ A sister of lqa-events, built the way Forks and Everett were: everything
 that makes this Port Angeles's is `site/city.js` (every team, venue, type,
 default, share-code registry and string), `site/index.html`,
 `scripts/fetch-events.mjs` (the sources), `site/embed.js`, `outlook.json`,
-`scripts/data/postseason.json`, `channels.json`, the manifest and icons (the
+`scripts/data/postseason.json`, `channels.json`, `scripts/feeds.mjs` (shared: the venue-feed adapters), the manifest and icons (the
 Olympic ridge over the strait, rendered from `favicon.svg`). Everything else is
 lqa-events' own, byte for byte — copy from there, never edit here.
 
@@ -27,6 +27,11 @@ lqa-events' own, byte for byte — copy from there, never edit here.
 
 ## Sources
 
+- **Field Arts & Events Hall** — its own calendar (WordPress, The Events Calendar REST at
+  fieldhallevents.org/wp-json/tribe/events/v1/events) through `scripts/feeds.mjs` (city.js `feed`):
+  every show in the Donna M. Morris Theater and the Sunset Lounge; the daily 'Box Office Open'
+  and gallery-hours rows are left out. Tickets sell on Ludus (fieldhall.ludus.com); sold-out
+  status is not read yet.
 - **Ticketmaster Discovery API** — every room by its venue id (every page):
   six rooms, in town to an hour east. The peninsula rooms carry only the odd
   tour date — the first build (2026-10-13) found nothing upcoming at any of
@@ -38,8 +43,7 @@ lqa-events' own, byte for byte — copy from there, never edit here.
   shared with lqa). The clubs are Teams-view-only: their grounds are not rooms
   here and nothing of theirs enters the listing.
 
-Next to add: Field Arts & Events Hall (fieldhallpa.org did not resolve on the
-first build), the Juan de Fuca Festival, the Port Angeles Symphony and the
+Next to add: the Juan de Fuca Festival, the Port Angeles Symphony and the
 Lefties' West Coast League schedule, once one of them publishes something
 parseable.
 

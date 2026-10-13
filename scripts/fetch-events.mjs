@@ -12,8 +12,10 @@
  * here reaches Victoria across the strait before anything on the peninsula).
  * Six rooms — three in Port Angeles, 7 Cedars in Sequim, Fort Worden and the
  * Jefferson County fairgrounds in Port Townsend — and Ticketmaster had
- * nothing upcoming at any of them on the first build (2026-10-13); the
- * site's weight is the Teams view. The Seattle clubs' seasons come from ESPN, MLB's stats API and the
+ * nothing upcoming at any of them on the first build (2026-10-13). Field
+ * Arts & Events Hall, the town's hall, comes from its own calendar (The
+ * Events Calendar REST, city.js `feed`, scripts/feeds.mjs) — added the same
+ * day after it was missed; it carries the list. The Seattle clubs' seasons come from ESPN, MLB's stats API and the
  * NHL's (scripts/schedules.mjs); they are Teams-view-only (no `inject`), so
  * nothing of theirs enters the listing. Twelve sister builds share the
  * Ticketmaster key, so every call is paced 1.5 s apart and a 429 waits 8 s
@@ -22,6 +24,7 @@
 import { writeFileSync, readFileSync } from 'node:fs';
 import { buildIcs } from './ics.mjs';
 import { dropTimeClashes, isChurch } from './sources.mjs';
+import { feedSources, emptyListGate } from './feeds.mjs';
 import { mergeWithArchive, unionArchives } from './merge.mjs';
 import { calmTitle, isNotice } from './titles.mjs';
 import { applySchedules } from './schedules.mjs';
@@ -120,7 +123,8 @@ async function ticketmasterVenue({ venueId, venueMatch, label, fallbackUrl, excl
 }
 const ticketmasterRooms = Object.entries(CITY.venues).filter(([, v]) => v.tm)
   .map(([label, v]) => () => ticketmasterVenue({ venueId: v.tm.id, venueMatch: v.tm.match, label, fallbackUrl: v.tm.fallbackUrl, exclude: v.tm.exclude }));
-const sources = [...ticketmasterRooms];
+// Rooms with their own calendar (city.js `feed`: Field Arts & Events Hall's Events Calendar REST) come through feeds.mjs
+const sources = [...ticketmasterRooms, ...feedSources(CITY, BROWSER_UA)];
 // Secondary sources re-list shows the primaries carry under other titles;
 // anything at an already-taken venue/date/time is dropped. None yet.
 const secondary = [];
@@ -171,6 +175,9 @@ const fresh = all
   .filter((e) => !isNotice(e.title)) // a closure or construction notice is information, not an event
   .map((e) => ({ ...e, title: calmTitle(e.title) })) // shouted titles come down to Title Case
   .filter((e) => { const k = `${e.venue}|${e.title}|${e.date}`; if (seen.has(k)) return false; seen.add(k); return true; });
+// the empty-list gate (feeds.mjs): nothing upcoming in this build's own pull means a room was
+// missed or every source is down — say so and stop rather than publish an empty calendar
+if (!emptyListGate(fresh, today, sources.length)) process.exit(1);
 
 // carry past events forward. Two copies of the archive: the live feed and
 // the `archive` branch's file (every past event ever published; the workflow

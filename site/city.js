@@ -97,6 +97,18 @@
   // Little Creek); the rooms stay on the list because they carry the odd tour
   // date and a fair, and the site's weight is the Teams view.
   var VENUES = {
+    'Field Arts & Events Hall': { // the town's hall (2023): the 500-seat Donna M. Morris Theater, the Sunset Lounge, the gallery; box office on Ludus
+      capacity: 500,
+      type: 'arts',
+      cssVar: '--v-field',
+      color: '#ea9f86',
+      url: 'https://fieldhallevents.org/calendar/',
+      icon: 'https://www.google.com/s2/favicons?domain=fieldhallevents.org&sz=128',
+      // its own calendar (WordPress, The Events Calendar) — 'Box Office Open' is a daily row the
+      // adapter folds away by repetition; the gallery's run goes the same way
+      feed: { kind: 'tribe', url: 'https://fieldhallevents.org/wp-json/tribe/events/v1/events', drop: /^box office open$/i },
+      alias: /field (arts|hall)|donna m\. morris|sunset lounge|laura cooksey|waterfront coffee bar/i,
+    },
     'Clallam County Fairgrounds': {
       capacity: 3000,
       type: 'community',
@@ -162,7 +174,7 @@
   };
 
   // The filter panel's starting state: every room on, nothing off.
-  var DEFAULT_ON = ['Clallam County Fairgrounds', 'Civic Field', 'Port Angeles High School', '7 Cedars Casino', 'Fort Worden', 'Jefferson County Fairgrounds'];
+  var DEFAULT_ON = ['Field Arts & Events Hall', 'Clallam County Fairgrounds', 'Civic Field', 'Port Angeles High School', '7 Cedars Casino', 'Fort Worden', 'Jefferson County Fairgrounds'];
   var DEFAULT_OFF = [];
   var PREFS_KNOWN_FROM = null; // no default-off venue yet, so nothing for saved prefs to be told about
 
@@ -170,7 +182,7 @@
   var TYPES = [
     { key: 'concert', label: 'Concerts', title: 'Live music — the casino showroom, Fort Worden, the fair grandstand' },
     { key: 'sports', label: 'Sports', title: 'Lefties baseball at Civic Field, rodeo, derbies' },
-    { key: 'arts', label: 'Arts & Theater', title: 'The symphony, theatre, comedy, dance' },
+    { key: 'arts', label: 'Arts & Theater', title: 'Field Hall, the symphony, theatre, comedy, dance' },
     { key: 'community', label: 'Community', title: 'The county fairs, festivals, family days' },
   ];
   var MOVIE_VENUE = null; // no cinema here
@@ -179,10 +191,12 @@
   // order and a code is a bitmask over it, so the list is APPEND-ONLY —
   // adding an entry adds a bit and every existing code keeps meaning what
   // it meant; removing or reordering one changes every link out there.
-  // 20 slots from the first build: five base-36 digits (room to append).
+  // 20 slots from the first build, Field Hall appended 2026-10-13 (21): five base-36 digits.
   var CODE_LENGTH = 5;
   var REGISTRY = [
     ['venue', 'Clallam County Fairgrounds'], ['venue', 'Civic Field'], ['venue', 'Port Angeles High School'], ['venue', '7 Cedars Casino'], ['venue', 'Fort Worden'], ['venue', 'Jefferson County Fairgrounds'],
+    // appended 2026-10-13 (the registry is append-only: old share codes keep their meaning)
+    ['venue', 'Field Arts & Events Hall'],
     ['badge', 'concert'], ['badge', 'sports'], ['badge', 'arts'], ['badge', 'community'],
     ['team', 'seahawks'], ['team', 'mariners'], ['team', 'kraken'], ['team', 'storm'], ['team', 'reign'], ['team', 'sounders'],
     ['cap', 'stadium'], ['cap', 'arena'], ['cap', 'hall'], ['cap', 'room'],
@@ -191,7 +205,7 @@
   var WORDS = {
     teamCity: 'Seattle', // the board drops it from the clubs' names ("Seattle Kraken" → Kraken)
     presetDefault: 'Every room — Port Angeles, Sequim and Port Townsend — every team and type',
-    presetNeighborhood: 'Port Angeles and Sequim only — the fairgrounds, Civic Field, the high school\'s hall, 7 Cedars',
+    presetNeighborhood: 'Port Angeles and Sequim only — Field Hall, the fairgrounds, Civic Field, the high school\'s hall, 7 Cedars',
     presetBig: 'Only the places that hold 2,000 or more — the fairgrounds and Civic Field',
     phrases: { all: 'Showing everything.', none: 'Showing nothing yet — open Filter and pick some venues.', neighborhood: 'Showing Port Angeles and Sequim only.', big: 'Showing the big rooms only — the fairgrounds and Civic Field.' },
   };
