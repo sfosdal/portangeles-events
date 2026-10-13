@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <rect width="32" height="32" rx="6" fill="#1b2733"/>
+  <!-- the Olympics over the Strait of Juan de Fuca: a snow-capped ridge, the water below, a low sun behind -->
+  <circle cx="24" cy="10" r="4.2" fill="#f0c674" opacity=".75"/>
+  <polygon points="2,21 9,10 13,16 17,8 22,15 25,12 30,21" fill="#3d5a73"/>
+  <polygon points="15,10.4 17,8 19,10.4 17.6,10.2 17,9.1 16.4,10.2" fill="#e9f1f6"/>
+  <polygon points="7.2,12.6 9,10 10.8,12.7 10,12.4 9,11.1 8,12.4" fill="#e9f1f6"/>
+  <rect x="2" y="21" width="28" height="8" fill="#2e6f8e"/>
+  <rect x="4" y="23.2" width="9" height="1.1" rx=".55" fill="#9fd3e8" opacity=".7"/>
+  <rect x="17" y="25.6" width="11" height="1.1" rx=".55" fill="#9fd3e8" opacity=".55"/>
+</svg>
