@@ -106,7 +106,7 @@
       icon: 'https://www.google.com/s2/favicons?domain=fieldhallevents.org&sz=128',
       // its own calendar (WordPress, The Events Calendar) — 'Box Office Open' is a daily row the
       // adapter folds away by repetition; the gallery's run goes the same way
-      feed: { kind: 'tribe', url: 'https://fieldhallevents.org/wp-json/tribe/events/v1/events', drop: /^box office open$/i },
+      feed: { kind: 'ics', url: 'https://fieldhallevents.org/events/list/', drop: /^box office open$/i }, // the REST API went 401 on 2026-10-14; the iCal export still serves
       alias: /field (arts|hall)|donna m\. morris|sunset lounge|laura cooksey|waterfront coffee bar/i,
     },
     'Clallam County Fairgrounds': {
