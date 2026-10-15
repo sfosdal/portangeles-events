@@ -1,3 +1,12 @@
 {
- "events": []
+ "events": [
+  {
+   "venue": "Field Arts & Events Hall",
+   "title": "Cozy Comedy Presents: Gary Gulman: The Grandiloquent Tour",
+   "date": "2026-10-14",
+   "time": "19:00",
+   "url": "https://fieldhallevents.org/event/cozy-comedy-presents-gary-gulman-the-grandiloquent-tour/",
+   "type": "arts"
+  }
+ ]
 }
