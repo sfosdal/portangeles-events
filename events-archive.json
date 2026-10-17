@@ -7,6 +7,22 @@
    "time": "19:00",
    "url": "https://fieldhallevents.org/event/cozy-comedy-presents-gary-gulman-the-grandiloquent-tour/",
    "type": "arts"
+  },
+  {
+   "venue": "Field Arts & Events Hall",
+   "title": "Everyone Deserves To Be Seen",
+   "date": "2026-10-16",
+   "time": "10:00",
+   "url": "https://fieldhallevents.org/event/everyone-deserves-to-be-seen-2/2026-10-16/",
+   "type": "arts"
+  },
+  {
+   "venue": "Field Arts & Events Hall",
+   "title": "Afro-Cuban All Stars",
+   "date": "2026-10-16",
+   "time": "20:00",
+   "url": "https://fieldhallevents.org/event/afro-cuban-all-stars/2026-10-16/",
+   "type": "concert"
   }
  ]
 }
