@@ -23,6 +23,22 @@
    "time": "20:00",
    "url": "https://fieldhallevents.org/event/afro-cuban-all-stars/2026-10-16/",
    "type": "concert"
+  },
+  {
+   "venue": "Field Arts & Events Hall",
+   "title": "Everyone Deserves To Be Seen",
+   "date": "2026-10-17",
+   "time": "10:00",
+   "url": "https://fieldhallevents.org/event/everyone-deserves-to-be-seen-2/2026-10-17/",
+   "type": "arts"
+  },
+  {
+   "venue": "Field Arts & Events Hall",
+   "title": "Afro-Cuban All Stars",
+   "date": "2026-10-17",
+   "time": "19:30",
+   "url": "https://fieldhallevents.org/event/afro-cuban-all-stars/2026-10-17/",
+   "type": "concert"
   }
  ]
 }
