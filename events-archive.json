@@ -103,6 +103,30 @@
    "time": "19:30",
    "url": "https://fieldhallevents.org/event/olympic-peninsula-humane-society-presents-the-magic-of-motown/",
    "type": "concert"
+  },
+  {
+   "venue": "Field Arts & Events Hall",
+   "title": "Everyone Deserves To Be Seen",
+   "date": "2026-10-24",
+   "time": "10:00",
+   "url": "https://fieldhallevents.org/event/everyone-deserves-to-be-seen-2/2026-10-24/",
+   "type": "arts"
+  },
+  {
+   "venue": "Field Arts & Events Hall",
+   "title": "Field Hall and Port Book & News Present: Port Angeles Book Fest",
+   "date": "2026-10-24",
+   "time": "13:00",
+   "url": "https://fieldhallevents.org/event/field-hall-and-port-book-news-present-port-angeles-book-fest/",
+   "type": "arts"
+  },
+  {
+   "venue": "Field Arts & Events Hall",
+   "title": "Fall Crawl at Field Hall: in Partnership with the Port Angeles Waterfront District",
+   "date": "2026-10-24",
+   "time": "17:00",
+   "url": "https://fieldhallevents.org/event/fall-crawl-at-field-hall-in-partnership-with-the-port-angeles-waterfront-district/",
+   "type": "arts"
   }
  ]
 }
