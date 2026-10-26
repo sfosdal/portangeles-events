@@ -98,6 +98,7 @@
   // date and a fair, and the site's weight is the Teams view.
   var VENUES = {
     'Field Arts & Events Hall': { // the town's hall (2023): the 500-seat Donna M. Morris Theater, the Sunset Lounge, the gallery; box office on Ludus
+      geo: [48.1212, -123.43484],
       capacity: 500,
       type: 'arts',
       cssVar: '--v-field',
@@ -110,6 +111,7 @@
       alias: /field (arts|hall)|donna m\. morris|sunset lounge|laura cooksey|waterfront coffee bar/i,
     },
     'Clallam County Fairgrounds': {
+      geo: [48.1171, -123.47723],
       capacity: 3000,
       type: 'community',
       cssVar: '--v-clallam',
@@ -120,6 +122,7 @@
       alias: /clallam county fair/i,
     },
     'Civic Field': { // the Port Angeles Lefties' ballpark (West Coast League, June–August) and the high school's football field
+      geo: [48.11055, -123.41981],
       capacity: 2000,
       type: 'sports',
       cssVar: '--v-civic',
@@ -130,6 +133,7 @@
       alias: /civic field|port angeles lefties/i,
     },
     'Port Angeles High School': { // the Performing Arts Center on the campus: the symphony, touring shows, the school's own
+      geo: [48.10022, -123.44034],
       capacity: 1100,
       type: 'arts',
       cssVar: '--v-pahs',
@@ -140,6 +144,7 @@
       alias: /port angeles high school|pahs performing arts/i,
     },
     '7 Cedars Casino': { // Sequim, twenty minutes east
+      geo: [48.02189, -123.01087],
       capacity: 700,
       type: 'concert',
       cssVar: '--v-cedars',
@@ -150,6 +155,7 @@
       alias: /7 cedars|seven cedars/i,
     },
     'Fort Worden': {
+      geo: [48.1366, -122.7658],
       area: 'town',
       capacity: 1200,
       type: 'concert',
@@ -161,6 +167,7 @@
       alias: /fort worden|mccurdy pavilion|wheeler theat/i, // the Wheeler Theater (TM KovZpap9Ie, empty) is a 250-seat room on the same grounds
     },
     'Jefferson County Fairgrounds': {
+      geo: [48.13406, -122.78303],
       area: 'town',
       capacity: 2000,
       type: 'community',
@@ -220,6 +227,22 @@
     ics: { name: 'Port Angeles Events', short: 'Port Angeles Events', teams: 'Seattle home teams — every season', prodid: '-//here.events//portangeles-events//EN', uidDomain: 'fosdal.net', // the UID domain the whole family issues (the shared ics test pins it)
       desc: 'Upcoming events around Port Angeles\\, WA — the north Olympic Peninsula rooms\\, Sequim to Port Townsend\\, with the Seattle clubs\' seasons' },
     teams: TEAMS,
+    map: { // the Map view (local-map.js; the ground drawn once by scripts/build-local-map.mjs from OpenStreetMap, committed as site/local-map.json) — Steve, 2026-10-25
+      kind: 'urban',
+      bbox: [47.98, -123.56, 48.2, -122.7], // south, west, north, east — the north Olympic Peninsula — Port Angeles to Port Townsend, Sequim between
+      home: [48.09, -123.5, 48.14, -123.39], // the view at first; the fit button shows the whole frame
+      roads: ['motorway', 'trunk', 'primary'],
+      tolerance: 0.8,
+      labels: [
+        { name: 'Port Angeles', lat: 48.1181, lon: -123.4307, anchor: 'start' },
+        { name: 'Sequim', lat: 48.0849, lon: -123.1097, anchor: 'start' },
+        { name: 'Port Townsend', lat: 48.118, lon: -122.7695, anchor: 'end' },
+        { name: 'Blyn', lat: 48.0217, lon: -123.0057, anchor: 'start' },
+        { name: 'Strait of Juan de Fuca', lat: 48.185, lon: -123.25, kind: 'water', anchor: 'middle' },
+        { name: 'Discovery Bay', lat: 48.03, lon: -122.88, kind: 'water', anchor: 'middle' },
+        { name: 'Sequim Bay', lat: 48.06, lon: -123.03, kind: 'water', anchor: 'start' },
+      ],
+    },
     venues: VENUES,
     defaultOn: DEFAULT_ON,
     defaultOff: DEFAULT_OFF,
