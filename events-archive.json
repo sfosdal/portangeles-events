@@ -151,6 +151,30 @@
    "time": "19:30",
    "url": "https://fieldhallevents.org/event/spain-flamenco-arts-la-velada/",
    "type": "arts"
+  },
+  {
+   "venue": "Field Arts & Events Hall",
+   "title": "Haunted Theater Experience & Downtown Trick-or-Treat",
+   "date": "2026-10-31",
+   "time": "14:00",
+   "url": "https://fieldhallevents.org/event/haunted-theater/",
+   "type": "community"
+  },
+  {
+   "venue": "Field Arts & Events Hall",
+   "title": "All-Ages Halloween Party",
+   "date": "2026-10-31",
+   "time": "16:00",
+   "url": "https://fieldhallevents.org/event/all-ages-halloween-party/",
+   "type": "community"
+  },
+  {
+   "venue": "Field Arts & Events Hall",
+   "title": "Hot Damn Scandal - Heebie and the Jeebies Halloween",
+   "date": "2026-10-31",
+   "time": "20:00",
+   "url": "https://fieldhallevents.org/event/hot-damn-scandal-heebie-and-the-jeebies-halloween/",
+   "type": "arts"
   }
  ]
 }
