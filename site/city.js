@@ -229,6 +229,7 @@
     teams: TEAMS,
     map: { // the Map view (local-map.js; the ground drawn once by scripts/build-local-map.mjs from OpenStreetMap, committed as site/local-map.json) — Steve, 2026-10-25
       kind: 'urban',
+      boundary: { osm: 237310 }, // the city line, always drawn (Steve, 2026-11-02): OpenStreetMap's boundary relation for Port Angeles
       bbox: [47.98, -123.56, 48.2, -122.7], // south, west, north, east — the north Olympic Peninsula — Port Angeles to Port Townsend, Sequim between
       home: [48.09, -123.5, 48.14, -123.39], // the view at first; the fit button shows the whole frame
       roads: ['motorway', 'trunk', 'primary'],
