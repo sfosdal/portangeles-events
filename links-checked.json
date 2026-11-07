@@ -43,5 +43,18 @@
   "https://fieldhallevents.org/event/the-little-mermaid-sing-along/": "2026-11-05",
   "https://fieldhallevents.org/event/the-way-out-a-film-presented-by-the-hurricane-ridge-winter-sports-education-foundation-2/": "2026-11-05",
   "https://fieldhallevents.org/event/winter-storytime/": "2026-11-05"
+ },
+ "guard": {
+  "https://7cedars.com/specialevents/": "2026-11-07",
+  "https://fieldhallevents.org/calendar/": "2026-11-07",
+  "https://jeffcofairgrounds.org/events/": "2026-11-07",
+  "https://pahs.portangelesschools.org/": "2026-11-07",
+  "https://paleftiesbaseball.com/schedule/": "2026-11-07",
+  "https://storm.wnba.com/schedule/": "2026-11-07",
+  "https://www.clallamcountywa.gov/399/Fairgrounds": "2026-11-07",
+  "https://www.nhl.com/kraken/schedule": "2026-11-07",
+  "https://www.reignfc.com/schedule": "2026-11-07",
+  "https://www.seahawks.com/schedule/": "2026-11-07",
+  "https://www.soundersfc.com/schedule/": "2026-11-07"
  }
 }
