@@ -183,6 +183,38 @@
    "time": "19:00",
    "url": "https://fieldhallevents.org/event/ghost-stories-opening-night-performance-for-the-27th-annual-forest-storytelling-festival/",
    "type": "community"
+  },
+  {
+   "venue": "Field Arts & Events Hall",
+   "title": "Story People of Clallam County with Field Hall: 27th Annual Forest Storytelling Festival, Friday Morning Segment",
+   "date": "2026-11-06",
+   "time": "09:00",
+   "url": "https://fieldhallevents.org/event/forest-storytelling-festival-friday-morning/",
+   "type": "community"
+  },
+  {
+   "venue": "Field Arts & Events Hall",
+   "title": "Story People of Clallam County with Field Hall: 27th Annual Forest Storytelling Festival, Friday Afternoon Segment",
+   "date": "2026-11-06",
+   "time": "13:45",
+   "url": "https://fieldhallevents.org/event/forest-storytelling-festival-friday-afternoon/",
+   "type": "community"
+  },
+  {
+   "venue": "Field Arts & Events Hall",
+   "title": "Gallery Opening: Natural Structures | A Solo Exhibition by Steve Belz",
+   "date": "2026-11-06",
+   "time": "17:00",
+   "url": "https://fieldhallevents.org/event/natural-structures/",
+   "type": "arts"
+  },
+  {
+   "venue": "Field Arts & Events Hall",
+   "title": "Story People of Clallam County with Field Hall: 27th Annual Forest Storytelling Festival, Friday Evening Performance",
+   "date": "2026-11-06",
+   "time": "19:00",
+   "url": "https://fieldhallevents.org/event/forest-storytelling-festival-friday-performance/",
+   "type": "community"
   }
  ]
 }
