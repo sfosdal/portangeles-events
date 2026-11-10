@@ -255,6 +255,14 @@
    "time": "12:00",
    "url": "https://fieldhallevents.org/event/free-jazz-sunday-7/",
    "type": "concert"
+  },
+  {
+   "venue": "Field Arts & Events Hall",
+   "title": "Open Mic Monday with Port Angeles Community Players",
+   "date": "2026-11-09",
+   "time": "18:00",
+   "url": "https://fieldhallevents.org/event/port-angeles-community-players/",
+   "type": "concert"
   }
  ]
 }
