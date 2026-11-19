@@ -279,6 +279,22 @@
    "time": "19:00",
    "url": "https://fieldhallevents.org/event/battle-of-the-bands/",
    "type": "concert"
+  },
+  {
+   "venue": "Field Arts & Events Hall",
+   "title": "Mermaid Storytime with NOLS",
+   "date": "2026-11-18",
+   "time": "17:30",
+   "url": "https://fieldhallevents.org/event/mermaid-storytime-with-nols/",
+   "type": "arts"
+  },
+  {
+   "venue": "Field Arts & Events Hall",
+   "title": "Films @ Field Hall: The Little Mermaid (Sing-Along!)",
+   "date": "2026-11-18",
+   "time": "18:30",
+   "url": "https://fieldhallevents.org/event/the-little-mermaid-sing-along/",
+   "type": "arts"
   }
  ]
 }
